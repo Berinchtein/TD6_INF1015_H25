@@ -36,6 +36,9 @@ namespace model {
     constexpr char START_WITH_BLACK = 'b';
     const std::string KING_EXCEEDED_LIMIT = "Trop de rois dans le jeu.";
     const std::string KING_BELOW_LIMIT = "Pas assez de rois.";
+
+    class Piece; class Rook; class King; class Tile; class Board; class Knight; // Permet d'utiliser les types alors qu'ils seront défini après.
+
     enum class Color {
         White,
         Black
@@ -131,15 +134,15 @@ namespace model {
             "A2", "B2", "C2", "D2", "E2", "F2", "G2", "H2",
             "A1", "B1", "C1", "D1", "E1", "F1", "G1", "H1"
         };
-        static int nKings_ = 0;
+        static inline int nKings_ = 0;
     };
 
     class Knight : public Piece {
     public:
-        void calculatePossibleMovements(const std::pair<int, int>&, Board*) override;
-        void calculatePossibleSimpleMovements(const std::pair<int, int>&, Board*) override;
+        void calculatePossibleMovements(const std::pair<int, int>& position, const Board* board) override;
+        void calculatePossibleSimpleMovements(const std::pair<int, int>& position, const Board* board) override;
         char getName()      const override;
-        char getCharacter() const override;
+        char getCharacter() const;
 
     private:
         char pieceCharacter_;
