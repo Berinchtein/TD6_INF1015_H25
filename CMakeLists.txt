@@ -16,22 +16,22 @@ set(TS_FILES EchecApp_en_CA.ts)
 
 set(PROJECT_SOURCES
         board.cpp
-        board.h
+
         echequierwindow.cpp
         echequierwindow.hpp
         echequierwindow.ui
         king.cpp
-        king.h
+
         knight.cpp
-        knight.h
+
         main.cpp
         model.h
         piece.cpp
-        piece.h
+
         rook.cpp
-        rook.h
+
         tile.cpp
-        tile.h
+
         ${TS_FILES}
 )
 

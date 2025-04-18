@@ -43,6 +43,7 @@ namespace model {
         White,
         Black
     };
+
     class Piece {
     public:
         virtual ~Piece() = default;
