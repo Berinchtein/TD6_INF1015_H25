@@ -1,4 +1,5 @@
 #include "echequierwindow.hpp"
+#include "model.h"
 
 #include <QApplication>
 #include <QLocale>
