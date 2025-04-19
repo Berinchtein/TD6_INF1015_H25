@@ -10,7 +10,3 @@ void model::Knight::calculatePossibleMovements(const std::pair<int, int>& positi
         std::pair<int, int> newPos = { position.first + move.first, position.second + move.second };//a completer
     }
 }
-
-void model::Knight::calculatePossibleSimpleMovements(const std::pair<int, int>& position, const Board* board) {
-    calculatePossibleMovements(position, board);
-}

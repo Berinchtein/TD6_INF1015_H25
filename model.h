@@ -105,7 +105,6 @@ public:
 
     virtual char getName() const = 0;
     virtual void calculatePossibleMovements(const std::pair<int, int>& position, const Board* board) = 0;
-    virtual void calculatePossibleSimpleMovements(const std::pair<int, int>& position, const Board* board) = 0;
 
     const std::vector<std::pair<int, int>>& getPossibleMovements() const;
     void clearMovements();
@@ -120,7 +119,6 @@ class Rook : public Piece {
 public:
     Rook() = default;
     void calculatePossibleMovements(const std::pair<int, int>& position, const Board* board) override;
-    void calculatePossibleSimpleMovements(const std::pair<int, int>& position, const Board* board) override;
 
 private:
     std::vector<std::pair<int, int>> possibleMovements;
@@ -134,7 +132,6 @@ public:
 
     char getName() const override;
     void calculatePossibleMovements(const std::pair<int, int>& position, const Board* board) override;
-    void calculatePossibleSimpleMovements(const std::pair<int, int>& position, const Board* board) override;
     bool isConfrontingAdversaryKing(const std::pair<int, int>& position, const std::pair<int, int> adversaryPosition) const;
 
 private:
@@ -144,7 +141,6 @@ private:
 class Knight : public Piece {
 public:
     void calculatePossibleMovements(const std::pair<int, int>& position, const Board* board) override;
-    void calculatePossibleSimpleMovements(const std::pair<int, int>& position, const Board* board) override;
     char getName()      const override;
     char getCharacter() const;
 

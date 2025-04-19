@@ -5,6 +5,7 @@
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
+
 class EchequierWindow;
 }
 QT_END_NAMESPACE
@@ -18,6 +19,6 @@ public:
     ~EchequierWindow();
 
 private:
-    Ui::EchequierWindow *ui;
+    Ui::EchequierWindow *ui_;
 };
 #endif // ECHEQUIERWINDOW_HPP
